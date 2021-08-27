@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <ImageView
+        android:id="@+id/devImage"
+        android:layout_width="wrap_content"
+        android:layout_height="370dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/dev_image"
+        android:layout_margin="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="made with love by "
+        android:textSize="28sp"
+        android:layout_below="@id/devImage"
+        android:fontFamily="cursive"
+        android:textColor="#0B9184"
+        android:layout_marginLeft="70dp"
+        android:id="@+id/txtWithLove"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smit J"
+        android:textSize="26sp"
+        android:layout_below="@id/devImage"
+        android:fontFamily="cursive"
+        android:layout_toRightOf="@id/txtWithLove"
+        android:paddingTop="4dp"
+        android:textColor="#DD2A1A"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="visit his Linkedin"
+        android:textAllCaps="false"
+        android:layout_below="@id/txtWithLove"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:id="@+id/btnLinkedin"
+        android:elevation="30dp"/>
+
+</RelativeLayout>

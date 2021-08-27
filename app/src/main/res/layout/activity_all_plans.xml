@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllPlansActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noPlansRelLayout"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="You do not have any plans"
+            android:textSize="32sp"
+            android:id="@+id/txtNoPlan"
+            android:textColor="#35BEFB"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNoPlan"
+            android:layout_centerHorizontal="true"
+            android:text="Add Plans"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lobster_two_italic"
+            android:backgroundTint="#21935B"
+            android:id="@+id/btnAddPlans"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/havePlansRelLayout"
+        android:layout_margin="20dp">
+
+<!--        here we put a recycler view, and then inisde the plan_item.xml-->
+<!--        we put the dayname, and edit textViews and also the and inside one item-->
+<!--        we again put a recycler view to show the plans horizontally-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/allDayRecView">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+
+
+<!--
+
+<androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/presentDayAllPlansRecView"/>
+
+                -->
+<!--
+
+
+
+<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mondayRelLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday"
+                android:textSize="25sp"
+                android:fontFamily="cursive"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:layout_alignParentEnd="true"
+                android:textSize="25sp"
+                android:fontFamily="cursive"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:id="@+id/mondayRecView"/>
+
+        </RelativeLayout>
+
+        -->
+
+
+</RelativeLayout>

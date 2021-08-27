@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trainingParent"
+    app:cardCornerRadius="15dp"
+    android:elevation="30dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/lobster_two_italic"
+            android:text="Training Name"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/txtName"
+            android:id="@+id/trainingImage"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDescription"
+            android:layout_below="@id/trainingImage"
+            android:text="short description in here"
+            android:textSize="15sp"
+            android:fontFamily="@font/lobster_two_italic"
+            android:layout_centerHorizontal="true"
+            android:padding= "5dp"/>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

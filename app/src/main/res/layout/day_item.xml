@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dayName"
+        android:id="@+id/txtDayName"
+        android:textSize="30dp"
+        android:fontFamily="cursive"
+        android:textColor="#009688"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:layout_alignParentEnd="true"
+        android:textSize="21dp"
+        android:fontFamily="casual"
+        android:id="@+id/txtEdit"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/presentDayAllPlansRecView"
+        android:layout_below="@id/txtDayName"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>
+

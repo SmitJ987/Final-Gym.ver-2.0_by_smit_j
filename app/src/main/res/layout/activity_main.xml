@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back1">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="All Trainings"
+        android:textSize="25sp"
+        android:id="@+id/btnAllTrainings"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        android:fontFamily="cursive"
+        android:backgroundTint="#0091EA" />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="My Plans"
+        android:textSize="25sp"
+        android:layout_below="@id/btnAllTrainings"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:textAllCaps="false"
+        android:backgroundTint="#5E7888"
+        android:id="@+id/btnMyPlans"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:fontFamily="cursive"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#44815D"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnAbout"
+        android:layout_below="@id/btnMyPlans"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:id="@+id/plan_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Training Name"
+        android:textSize="20sp"
+        android:fontFamily="@font/lobster_two_italic"
+        android:id="@+id/txtName"
+        android:textColor="#D31139"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emptyCircle"
+        android:src="@drawable/ic_empty_circle"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkedCircle"
+        android:src="@drawable/ic_checked_circle"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:id="@+id/trainingImage"
+        android:layout_below="@id/txtName"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:layout_below="@id/trainingImage"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txtTime"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMinutes"
+        android:text="minutes"
+        android:layout_below="@id/trainingImage"
+        android:layout_toRightOf="@id/txtTime"
+        android:textSize="15sp"
+        android:layout_marginLeft="7dp"
+        android:textColor="#03A9F4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTime"
+        android:text="Description in here"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txtDescription"
+        android:textColor="#00897B"/>
+
+
+</RelativeLayout>

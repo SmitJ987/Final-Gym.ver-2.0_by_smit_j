@@ -1,0 +1,104 @@
+1. getting the Material library dependency
+    import Glide library
+
+2. making layout: activity_main
+
+3. now for the all Trainings Activity,
+    we first need the Training model creating that: Training.java
+
+4. creating TrainingRecViewAdapter
+    for that we also need layout: training_item.xml, making that
+
+5. making TrainingRecViewAdapter
+
+6. making AllTrainingsActivity
+        the layout file: activity_all_trainings.xml: put only the RecyclerView
+
+        also we need Utils class, and inside that the allTrainings ArrayList
+        and method to get that AL, make it in Utils class
+
+7. permission for internet in: androidManifest file
+
+8. now when we click one of the Training, we need to open the the TrainingActivity
+   so making TrainingActivity
+
+9. but to open that Training on which the user has clicked, we have to puExtra that Training
+   with the Intent coming from TrainingRecViewAdapter class
+
+        now to putExtra, we can't Directly put Training inside the Intent,
+        we have to put it as a Parcelable
+        and to do so
+        we need to implement Parcelable and it's methods and creator fields inside the
+        Training.java (POJO class)
+
+    now we can put the Training object into the intent as a Parcelable, and the Key will be
+    TRAINING_KEY, which we have defined in the TrainingActivity.java
+
+10. Making Plan model
+
+11. in the MainActivity, setting onClickListener for btnMyPlans
+        but for this we want to make AllPlansActivity,making it now
+        so making of activity_all_plans.xml
+        we also need, plan_items.xml, making that
+
+12. in Utils, making Plans AL, and getPlans method
+
+13. now from the intent of AllPlansActivity we reach to AllTrainingActivity
+    and from AllTrainingActivity when we click on a Training
+    (then from the logic defined in the TrainingsRecViewAdapter, we reach to TrainingActivity
+    and there we have the button, btnAddPlan
+    as soon as we click that button we have to open a dialog,
+    which will show training name, and ask for minutes and day for which we want to practice
+
+    so for this dialog, we made
+        dialog_plan_details
+        now we make it's java file: Plan_Details_dialog.java
+
+14. so what in total we are doing here:
+
+    mission 1: we want to get the clicked training from AllTrainingsActivity
+            then we want to send that Training with the intent from AllTrainingActivity to TrainingActivity
+
+            inside the Training Activity
+            what we want to do is, get the Training which has come from AllTraining,
+            then showing a dialog to user to ask the day and minutes: (this is defined in dialog_plan_details.xml)
+            and now we have the clicked Training, day, and minutes
+
+            now we would make plan out of it:
+            as to make a new plan we have to pass following arguments inside it's constructor:
+                Training, day, minutes, isAccomplished
+            so we pass these, and make a plan
+
+            now we make a callback interface inside the PlanDialogInterface.java to pass this plan
+            back to it's parent activity i.e the TrainingActivity
+
+            now implement the PassPlanInterface in the TrainingActivity
+            and in implementing the method of passPlanInterface object
+            i.e the getPlan() method
+
+            we get the Plan object from PlanDetailsDialog
+
+            and now if that plan is not noll, we try to add it to static allPlans AL
+            which is inside the Utils class, we do so  with the help of
+            addPlan() method of Utils class
+
+            and then we startActivity,to go from this TrainingActivity to AllPlansActivity
+            but to show AllPlansActivity,
+            we have to make a PlansRecViewAdapter, plan_item.xml etc files
+            to set the adapter and plans, in the havePlansRecView
+
+making PlanRecViewAdapter
+
+so in AllActivity, we have a recyclerView: this recyclerView is day recyclerView
+so it will show the days with name
+and this recycler view also will have a RecyclerView inside them,
+so that inner recyclerView will show all the Plans we have for that day
+
+so for the external RecView: i.e to show the days, we make day_item.xml
+and we will have DayRecViewAdapter
+
+my linked in profile:   https://www.linkedin.com/in/smit-j-a270a71b7
+
+
+
+

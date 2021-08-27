@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Details"
+        android:fontFamily="cursive"
+        android:textSize="30dp"
+        android:id="@+id/txtEnterDetails"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="training name"
+        android:id="@+id/txtName"
+        android:layout_below="@id/txtEnterDetails"
+        android:textSize="23sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#A80937"
+        android:fontFamily="sans-serif-condensed-light"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much time do you have in mind?"
+        android:layout_below="@id/txtName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="italic"
+        android:id="@+id/txtQuestion"
+        android:textColor="#43A047"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="minutes"
+        android:layout_below="@id/txtQuestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:id="@+id/edtTxtMinutes"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select the Day"
+        android:id="@+id/txtSelectDay"
+        android:layout_below="@+id/edtTxtMinutes"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerDays"
+        android:layout_below="@+id/txtSelectDay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:entries="@array/allDays"
+        android:outlineAmbientShadowColor="#01D7F1"
+        >
+    </Spinner>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerDays"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dismiss"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btnDismiss"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btnAdd"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
